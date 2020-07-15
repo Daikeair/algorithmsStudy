@@ -23,7 +23,11 @@ public class DoubleList {
     }
 
     /**
-     * 链表头部添加节点x,其中head当做虚拟节点处理，永远在最前面 */
+     *链表头部添加节点x,其中head当做虚拟节点处理，永远在最前面
+     * 1、将x的next指针指向head的下一个节点，
+     * 2、将x的prev指针指向head。
+     * 3、将head的下一个节点的prev指针指向x。
+     * 4、将head的next指针指向x。*/
     public void addFirst(Node x){
         //head为虚拟节点，当前head的下一个节点的地址（假设为a）赋值给要插入数值的后面，也就是x的next节点
         x.next=head.next;
