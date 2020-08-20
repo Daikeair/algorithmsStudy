@@ -27,7 +27,7 @@ public class DemoSemaphore {
             public void park() {
                 try {
                     //获取信号量
-                    semaphore.acquire();
+                    semaphore.acquire(2);
                     long time = (long) (Math.random() * 10);
                     System.out.println(Thread.currentThread().getName() + "进入停车场，停车" + time + "秒...");
                     Thread.sleep(time);
